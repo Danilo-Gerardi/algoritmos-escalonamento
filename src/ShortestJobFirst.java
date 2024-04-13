@@ -28,21 +28,21 @@ public class ShortestJobFirst {
         }
     }
 
-    public static void calcularMetricas(List<Processo> Processoes) {
+    public static void calcularMetricas(List<Processo> processos) {
 
         double totaltempoDeEspera = 0;
         double turnaroundTotal = 0;
 
         System.out.println("Processo\tTempo de Espera\tTempo de Turnaround");
 
-        for (Processo Processo : Processoes) {
-            totaltempoDeEspera += Processo.tempoDeEspera;
-            turnaroundTotal += Processo.turnaround;
-            System.out.println(Processo.id + "\t\t" + Processo.tempoDeEspera + "\t\t\t" + Processo.turnaround);
+        for (Processo p : processos) {
+            totaltempoDeEspera += p.tempoDeEspera;
+            turnaroundTotal += p.turnaround;
+            System.out.println(p.id + "\t\t" + p.tempoDeEspera + "\t\t\t" + p.turnaround);
         }
 
-        double tempoDeEsperaMedio = totaltempoDeEspera / Processoes.size();
-        double turnaroundMedio = turnaroundTotal / Processoes.size();
+        double tempoDeEsperaMedio = totaltempoDeEspera / processos.size();
+        double turnaroundMedio = turnaroundTotal / processos.size();
 
         System.out.println("\nTempo médio de espera: " + tempoDeEsperaMedio);
         System.out.println("Tempo médio de turnaround: " + turnaroundMedio);

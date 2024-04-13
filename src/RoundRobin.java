@@ -47,13 +47,13 @@ public class RoundRobin {
         
         System.out.println("Processo\tTempo de Espera\tTurnaround Time");
         
-        for (Processo process : processos) {
-            process.tempoDeEspera = process.turnaround - process.tempoDeProcessador;
-            tempoDeEsperaTotal += process.tempoDeEspera;
-            turnarountTotal += process.turnaround;
-            tempoDeProcessamentoTotal += process.tempoDeProcessador;
+        for (Processo p : processos) {
+            p.tempoDeEspera = p.turnaround - p.tempoDeProcessador;
+            tempoDeEsperaTotal += p.tempoDeEspera;
+            turnarountTotal += p.turnaround;
+            tempoDeProcessamentoTotal += p.tempoDeProcessador;
 
-            System.out.println(process.id + "\t\t" + process.tempoDeEspera + "\t\t\t" + process.turnaround);
+            System.out.println(p.id + "\t\t" + p.tempoDeEspera + "\t\t\t" + p.turnaround);
         }
         
         double tempoDeEsperaMedio = tempoDeEsperaTotal / processos.size();

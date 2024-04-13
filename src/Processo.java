@@ -6,13 +6,13 @@ class Processo {
     int turnaround;
     int tempoRestante;
 
-    Processo(int id, int arrivalTime, int burstTime) {
+    Processo(int id, int tempoDeEspera, int tempoDeProcessador) {
         this.id = id;
-        this.tempoDeChegada = arrivalTime;
-        this.tempoDeProcessador = burstTime;
+        this.tempoDeChegada = tempoDeEspera;
+        this.tempoDeProcessador = tempoDeProcessador;
         this.tempoDeEspera = 0;
         this.turnaround = 0;
-        this.tempoRestante = burstTime;
+        this.tempoRestante = tempoDeProcessador;
     }
 }
 
