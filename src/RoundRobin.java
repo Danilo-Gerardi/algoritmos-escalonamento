@@ -58,11 +58,10 @@ public class RoundRobin {
         
         double tempoDeEsperaMedio = tempoDeEsperaTotal / processos.size();
         double turnaroundMedio = turnarountTotal / processos.size();
-        double usoDoProcessador = tempoDeProcessamentoTotal / turnarountTotal * 100;
+
         
         System.out.println("\nTempo médio de espera: " + tempoDeEsperaMedio);
         System.out.println("Tempo médio de turnaround: " + turnaroundMedio);
         System.out.println("Tempo total de processador: " + tempoDeProcessamentoTotal);
-        System.out.println("Utilização do processador: " + usoDoProcessador + "%");
     }
 }
